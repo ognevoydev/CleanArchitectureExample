@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'kotlin-kapt'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.mockito:mockito-core:4.0.0'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:4.0.0'
+    testImplementation 'org.mockito:mockito-inline:4.0.0'
+    testImplementation 'com.willowtreeapps.assertk:assertk-jvm:0.25'
+    testImplementation 'io.mockk:mockk:{version}'
+
+    implementation "com.google.dagger:dagger:2.43.2"
+    kapt "com.google.dagger:dagger-compiler:2.43.2"
+
+}
